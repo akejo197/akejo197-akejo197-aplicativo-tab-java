@@ -5,7 +5,7 @@ Archivos del aplicativo movil con autenticacion en java y firebase
 
 
 
-<img width="366" height="806" alt="image" src="https://github.com/user-attachments/assets/74cd8bec-6992-4698-b3e8-f080e245dde2" />
+<img width="366" height="810" alt="image" src="https://github.com/user-attachments/assets/74cd8bec-6992-4698-b3e8-f080e245dde2" />
 
 
 
