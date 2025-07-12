@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="color_letra">#FFFFFFFF</color>
+    <color name="color_login_fondo">#00BBFF</color>
+    <color name="rojo_general">#E90808</color>
+    <color name="backgroud_login_color_boton_google">#F0F4F5</color>
+    <color name="backgroud_login_color_boton_facebook">#0866FF</color>
+    <color name="separador">#ffffff</color>
+    <color name="color_fondo_ingreso_datos">#ffffff</color>
+    <color name="color_trasparente">#00000000</color>
+</resources>

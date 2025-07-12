@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".registro">
+
+    <TextView
+        android:id="@+id/titulo_registro"
+        style="@style/estilos_titulos.tamaño_letra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:gravity="center"
+        android:text="@string/registro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/contenido"
+         />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margenes_datos"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:layout_marginEnd="@dimen/margenes_datos"
+            android:background="@drawable/backgroud_borde_datos"
+            app:layout_constraintTop_toBottomOf="@id/titulo_registro"
+            >
+
+            <TextView
+                android:id="@+id/subtitulo_datos_personales"
+                style="@style/estilos_titulos.tamaño_letra.subtiltulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/dimencion_little"
+                android:gravity="center"
+                android:text="@string/Subtitulo_registro"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutCorreo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+            <!--solicitud Correo-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutContraseña">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingreso_usuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/correo_electronico"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@+id/ingrese_apellidos" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!--solicitud contraseña-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/registrarme">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingreso_contrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/contrasena"
+                    android:inputType="phone"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registrarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimencion_little"
+                android:layout_marginTop="@dimen/dimencion_little"
+                android:layout_marginEnd="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/margen_botones"
+                android:background="@drawable/background_boton_iniciar_sesion"
+                android:elevation="0dp"
+                android:text="@string/registrarme"
+                android:textAppearance="@style/estilo_boton_iniciar_sesion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

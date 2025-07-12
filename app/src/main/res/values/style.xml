@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="estilos_titulos"/>
+    <style name="estilos_titulos.tamaño_letra">
+        <item name="android:textSize">@dimen/tamaño_titulo</item>
+        <item name="android:textColor">@color/color_letra</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="estilos_titulos.tamaño_letra.subtiltulo">
+        <item name="android:textSize">@dimen/tamaño_subtitulo</item>
+        <item name="android:layout_marginTop">@dimen/margen_top</item>
+    </style>
+    <style name="estilos_titulos.estilo_titulo_iniciar_sesion">
+        <item name="android:textSize">@dimen/tamaño_titulo_iniciar_sesion</item>
+        <item name="android:textColor">@color/color_letra</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="estilos_titulos.estilo_subtilulo_iniciar_sesion">
+        <item name="android:textSize">@dimen/tamaño_subtitulo_iniciar_sesion</item>
+        <item name="android:textColor">@color/color_letra</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="estilo_login_boton_google">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="estilo_boton_eventos">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_letra</item>
+
+    </style>
+    <style name="estilo_boton_perfil">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/rojo_general</item>
+
+    </style>
+
+    <style name="estilo_login_boton_google.boton_facebook">
+        <item name="android:textColor">@color/color_letra</item>
+    </style>
+
+    <style name="estilo_boton_iniciar_sesion">
+        <item name="android:textColor">@color/color_letra</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="background">@color/rojo_general</item>
+
+    </style>
+
+    <style name="estilo_botones_perfil">
+        <item name="android:textColor">@color/color_letra</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+
+</resources>

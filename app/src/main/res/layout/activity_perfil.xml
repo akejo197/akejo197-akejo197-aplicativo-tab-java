@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/perfil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".activity_perfil">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_eventos"
+        android:layout_width="@dimen/tamaño_botones_google_facebook"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        android:background="@drawable/backgroud_color_perfil"
+        android:elevation="0dp"
+        android:text="@string/eventos"
+        android:textAppearance="@style/estilo_boton_perfil"
+        app:layout_constraintEnd_toStartOf="@id/boton_perfil"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_perfil"
+        android:layout_width="@dimen/tamaño_botones_google_facebook"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimencion_small"
+        android:background="@drawable/background_boton_eventos"
+        android:text="@string/boton_perfil"
+        android:textAppearance="@style/estilo_boton_eventos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/boton_eventos"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margenes_datos"
+        android:layout_marginTop="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/margenes_datos"
+        android:background="@drawable/backgroud_borde_datos"
+        app:layout_constraintTop_toBottomOf="@id/boton_perfil"
+        android:paddingBottom="@dimen/dimencion_small"
+        >
+
+        <ImageView
+            android:id="@+id/logo_iniciar_sesion"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/backgroud_login"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dimencion_small"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_editar_datos_personales"
+            android:layout_width="@dimen/tamaño_botones_google_facebook"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:background="@drawable/background_color_transparente"
+            android:text="@string/boton_editar_datos_personales"
+            android:textAppearance="@style/estilo_botones_perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo_iniciar_sesion"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_editar_datos_medicos"
+            android:layout_width="@dimen/tamaño_botones_google_facebook"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:background="@drawable/background_color_transparente"
+            android:text="@string/boton_registro_datos_medicos"
+            android:textAppearance="@style/estilo_botones_perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/boton_editar_datos_personales"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_eventos_registrados"
+            android:layout_width="@dimen/tamaño_botones_google_facebook"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:background="@drawable/background_color_transparente"
+            android:text="@string/boton_eventos_registrados"
+            android:textAppearance="@style/estilo_botones_perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/boton_editar_datos_medicos"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/boton_cerrar_sesion"
+            android:layout_width="@dimen/tamaño_botones_google_facebook"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:background="@drawable/background_color_transparente"
+            android:text="@string/boton_cerrar_sesion"
+            android:textAppearance="@style/estilo_botones_perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/boton_eventos_registrados"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

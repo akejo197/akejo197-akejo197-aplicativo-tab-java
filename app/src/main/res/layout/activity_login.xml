@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".activity_login">
+
+
+    <TextView
+        android:id="@+id/titulo_tab"
+        style="@style/estilos_titulos.estilo_titulo_iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="@dimen/dimencion_small"
+        android:gravity="center"
+        android:text="@string/feat_login_team_alpino_bike"
+        app:layout_constraintBottom_toTopOf="@id/subtitulo_iniciar_sesion"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo_iniciar_sesion"
+        style="@style/estilos_titulos.estilo_subtilulo_iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimencion_small"
+        android:gravity="center"
+        android:text="@string/feat_login_iniciar_sesion"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayoutUsuario"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/titulo_tab"
+
+
+        />
+    <!--input de ingreso de correo del usuario-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayoutContrasena">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ingreso_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimencion_small"
+            android:background="@drawable/fondo"
+            android:backgroundTint="@color/color_fondo_ingreso_datos"
+            android:gravity="center"
+            android:hint="@string/texto_usuario"
+            android:inputType="text"
+            android:padding="@dimen/padding_ingreso_datos"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--input de ingreso de contraseña del usuario-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        app:layout_constraintBottom_toTopOf="@id/boton_iniciar_sesion">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ingreso_contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginBottom="@dimen/dimencion_small"
+            android:background="@drawable/fondo"
+            android:backgroundTint="@color/color_fondo_ingreso_datos"
+            android:gravity="center"
+            android:hint="@string/texto_contraseña"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding_ingreso_datos"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--boton de iniciar sesion-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        android:layout_marginBottom="@dimen/dimencion_little"
+        android:background="@drawable/background_boton_iniciar_sesion"
+        android:elevation="0dp"
+        android:text="@string/boton_iniciar_sesion"
+        android:textAppearance="@style/estilo_boton_iniciar_sesion"
+        app:layout_constraintBottom_toTopOf="@id/opciones_recuperar_contraseña"
+
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/opciones_recuperar_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        app:layout_constraintBottom_toTopOf="@id/separador"
+        app:layout_constraintTop_toBottomOf="@id/subtitulo_iniciar_sesion">
+
+
+        <TextView
+            android:id="@+id/olvide_mi_contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_or"
+            android:layout_marginBottom="@dimen/dimencion_little"
+            android:gravity="center"
+            android:text="@string/olvide_mi_contgrasena"
+            android:textColor="@color/color_letra"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/recuperar_contraseña"
+            app:layout_constraintHorizontal_chainStyle="packed"
+
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/recuperar_contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margen_top"
+            android:layout_marginEnd="@dimen/margen_or"
+            android:layout_marginBottom="@dimen/dimencion_little"
+            android:text="@string/recuperar_contraseña"
+            android:textColor="@color/rojo_general"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/olvide_mi_contraseña" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        app:layout_constraintTop_toBottomOf="@id/opciones_recuperar_contraseña">
+
+        <TextView
+            android:id="@+id/boton_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/OR"
+            android:textColor="@color/color_letra"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/margen_or"
+            android:background="@color/separador"
+            app:layout_constraintBottom_toBottomOf="@id/boton_or"
+            app:layout_constraintEnd_toStartOf="@id/boton_or"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/boton_or" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/margen_or"
+            android:background="@color/separador"
+            app:layout_constraintBottom_toBottomOf="@id/boton_or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/boton_or"
+            app:layout_constraintTop_toTopOf="@id/boton_or" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/opciones_iniciar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        app:layout_constraintTop_toBottomOf="@id/separador">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_google"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:layout_marginEnd="@dimen/dimencion_small"
+            android:background="@drawable/background_login_google"
+            android:drawableStart="@drawable/icons8_logo_de_google"
+            android:elevation="0dp"
+            android:text="@string/boton_Google"
+            android:textAppearance="@style/estilo_login_boton_google"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_facebook"
+            app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_facebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimencion_small"
+            android:background="@drawable/backgroud_login_color_facebook"
+            android:text="@string/boton_facebook"
+            android:textAppearance="@style/estilo_login_boton_google.boton_facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/button_google"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

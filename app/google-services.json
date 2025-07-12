@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "268230539937",
+    "project_id": "actividad-sena-g8-a02-ev01",
+    "storage_bucket": "actividad-sena-g8-a02-ev01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268230539937:android:857df420020b47a7778ee0",
+        "android_client_info": {
+          "package_name": "com.tab.adso_g8_aa02_ev01"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOoZ3Njzorgwnq6bpILrQAkhQnpbHXnw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268230539937:android:c29953cc6a12a0f3778ee0",
+        "android_client_info": {
+          "package_name": "com.tab.tab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOoZ3Njzorgwnq6bpILrQAkhQnpbHXnw8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

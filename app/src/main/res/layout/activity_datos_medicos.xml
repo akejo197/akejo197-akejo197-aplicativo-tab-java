@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/datos_medicos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".activity_datos_medicos">
+
+
+    <TextView
+        android:id="@+id/titulo_datos_medicos"
+        style="@style/estilos_titulos.tamaño_letra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen_top"
+        android:gravity="center"
+        android:text="@string/feat_datos_medicos_titulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/titulo_datos_medicos">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margenes_datos"
+            android:layout_marginTop="@dimen/margenes_datos"
+            android:layout_marginEnd="@dimen/margenes_datos"
+            android:layout_marginBottom="@dimen/dimencion_little"
+            android:background="@drawable/backgroud_borde_datos">
+            <!--datos medicos-->
+            <TextView
+                android:id="@+id/subtitulo_datos_medicos"
+                style="@style/estilos_titulos.tamaño_letra.subtiltulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/dimencion_little"
+                android:gravity="center"
+                android:text="@string/feat_datos_medicos_subtitulo"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutEps"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--solicitud EPS-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutRegimen">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_EPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/texto_EPS"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--solicitud Regimen-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutRegimen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutAlergias">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_regimen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/texto_Regimen"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--solicitud alergias-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutAlergias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutEnfermedades">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_alergias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/ingrese_alegias"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--SOLICITUD DE ENFERMEDADES-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutEnfermedades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutNombreContacto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_enfermedades"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/ingrese_enfermedades"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--solicitud nombre contacto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutNombreContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutNumeroContacto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_Nombre_contacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/ingrese_nombre_contacto"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--solicitud numero contacto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutNumeroContacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutNumeroContacto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ingrese_telefono_contacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/numero_telefono_contacto"
+                    android:inputType="phone"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/boton_registro_datos_Medicos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimencion_little"
+                android:padding="@dimen/padding_ingreso_datos"
+                android:layout_marginEnd="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/margen_botones"
+                android:background="@drawable/background_boton_iniciar_sesion"
+                android:elevation="0dp"
+                android:text="@string/boton_registrar_datos_medicos"
+                android:textAppearance="@style/estilo_boton_iniciar_sesion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputLayoutNumeroContacto"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

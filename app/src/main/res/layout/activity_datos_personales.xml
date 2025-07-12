@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/datos_personales"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".activity_datos_personales">
+
+    <TextView
+        android:id="@+id/titulo_datos_personales"
+        style="@style/estilos_titulos.tamaño_letra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tamaño_botones_google_facebook"
+        android:gravity="center"
+        android:text="@string/feat_datos_personales_titulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimencion_little"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/titulo_datos_personales">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margenes_datos"
+            android:layout_marginTop="@dimen/margenes_datos"
+            android:layout_marginEnd="@dimen/margenes_datos"
+            android:background="@drawable/backgroud_borde_datos"
+
+            >
+
+            <TextView
+                android:id="@+id/subtitulo_datos_personales"
+                style="@style/estilos_titulos.tamaño_letra.subtiltulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/dimencion_little"
+                android:gravity="center"
+                android:text="@string/feat_datos_personales_subtitulo"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutNombres"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutNombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutApellidos">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/texto_nombres"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--solicitud apellidos-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutTelefono">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/apellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/texto_apellidos"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!--solicitud telefono-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/menu_desplegable">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/numero_telefono"
+                    android:inputType="phone"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!--ingreso tipo de identificacion-->
+
+            <Spinner
+                android:id="@+id/menu_desplegable"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altunar_spinner"
+                android:layout_marginStart="@dimen/dimencion_little"
+                android:layout_marginTop="@dimen/margen_edit_text"
+                android:layout_marginEnd="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/dimencion_little"
+                android:background="@drawable/background_spinner"
+                android:clickable="true"
+                android:entries="@array/tipos_documento"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/textInputLayoutIdentificacion"
+
+                />
+
+            <!--solicitud telefono-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutIdentificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/boton_registro_datos_personales">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/identificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimencion_little"
+                    android:layout_marginTop="@dimen/margen_edit_text"
+                    android:layout_marginEnd="@dimen/dimencion_little"
+                    android:layout_marginBottom="@dimen/dimencion_little"
+                    android:background="@drawable/fondo"
+                    android:backgroundTint="@color/color_fondo_ingreso_datos"
+                    android:gravity="center"
+                    android:hint="@string/numero_identificacion"
+                    android:inputType="text"
+                    android:padding="@dimen/padding_ingreso_datos"
+                    android:textColor="@color/black"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/boton_registro_datos_personales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimencion_little"
+                android:layout_marginTop="@dimen/dimencion_little"
+                android:layout_marginEnd="@dimen/dimencion_little"
+                android:layout_marginBottom="@dimen/margen_botones"
+                android:background="@drawable/background_boton_iniciar_sesion"
+                android:elevation="0dp"
+                android:text="@string/boton_registrar_datos_personales"
+                android:textAppearance="@style/estilo_boton_iniciar_sesion"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_login_fondo"
+    tools:context=".activity_eventos">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_eventos"
+        android:layout_width="@dimen/tamaño_botones_google_facebook"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimencion_small"
+        android:layout_marginEnd="@dimen/dimencion_small"
+        android:background="@drawable/background_boton_eventos"
+        android:elevation="0dp"
+        android:text="@string/eventos"
+        android:textAppearance="@style/estilo_boton_eventos"
+        app:layout_constraintEnd_toStartOf="@id/boton_perfil"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/boton_perfil"
+        android:layout_width="@dimen/tamaño_botones_google_facebook"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimencion_small"
+        android:background="@drawable/backgroud_color_perfil"
+        android:text="@string/boton_perfil"
+        android:textAppearance="@style/estilo_boton_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/boton_eventos"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimencion_margen">52dp</dimen>
+    <dimen name="margen_top">40sp</dimen>
+    <dimen name="tamaño_titulo">24sp</dimen>
+    <dimen name="tamaño_subtitulo">16sp</dimen>
+    <dimen name="tamaño_titulo_iniciar_sesion">30sp</dimen>
+    <dimen name="tamaño_subtitulo_iniciar_sesion">20sp</dimen>
+    <dimen name="dimencion_small">36dp</dimen>
+    <dimen name="margen_or">10dp</dimen>
+    <dimen name="margen_botones">30dp</dimen>
+    <dimen name="padding_ingreso_datos">12dp</dimen>
+    <dimen name="maximo_edittext">484dp</dimen>
+    <dimen name="altunar_spinner">48dp</dimen>
+    <dimen name="margen_edit_text">24dp</dimen>
+    <dimen name="margenes_datos">10dp</dimen>
+    <dimen name="dimencion_large">94dp</dimen>
+    <dimen name="tamaño_botones_google_facebook">150dp</dimen>
+    <dimen name="dimencion_little">20dp</dimen>
+</resources>
